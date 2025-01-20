@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="date-day">
+            <p id="current-day"></p>  <!-- Day -->
+            <p id="current-date"></p> <!-- Date -->
+        </div>
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="search-btn">Search</button>
+        <button id="location-btn">Use Current Location</button>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <p id="error-text"></p>
+        </div>        
+
+        <div id="weather-output" style="display: none;">
+            <div class="weather-info">
+                <p id="location-name"></p>
+                <div class="temp-details">
+                    <p id="temperature"></p>
+                </div>
+                <div class="icon-container">
+                    <img id="condition-icon" alt="Condition Icon">
+                </div>
+                <div class="condition">
+                    <p id="condition"></p>
+                </div>
+                <div class="weather-metrics">
+                    <!-- Metrics (Rain, Wind, Humidity) displayed inline with icons -->
+                </div>
+            </div>
+        </div>
+
+        <div id="forecast-output" style="display: none;">
+            <div class="forecast-container" id="forecast-container">
+                <!-- 5-day forecast will appear here -->
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
